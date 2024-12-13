@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  ollama:
+    image: ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    ports:
+      - "3000:8080"
